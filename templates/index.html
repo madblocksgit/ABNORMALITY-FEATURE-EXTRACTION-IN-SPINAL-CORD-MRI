@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body
+{
+ background-image:url("https://cdn-prod.medicalnewstoday.com/content/images/articles/323/323693/mri-scan-for-lumbar-pain.jpg")
+}
+</style>
+<style>
+p 
+{
+  font-family:verdana;
+  font-size:30px;
+}
+h1
+{ 
+    text-align:center;
+    word-spacing:20px;
+    color:red;
+}
+</style>
+</head>
+<body>
+  <form action="/predict" method='POST'> 
+      <table border="10px" width="50%" height="100" align="center" cellspacing="15" bgcolor="pink">
+           <p><h1> VALUES OF FEATURES FROM MRI IMAGE</h1></p>
+                  <tr><td> Attribute 1:Pelvic_incidence</td><td><input type="text" name="col1" size="30"></td></tr>
+                  <tr><td> Attribute 2:Pelvic_tilt</td><td><input type="text" name="col2"size="30"></td></tr>
+                  <tr><td> Attribute 3:Lumbar_lordois_angle</td><td><input type="text" name="col3"size="30"></td></tr>
+                  <tr><td> Attribute 4:Sacral_slope</td><td><input type="text" name="col4"size="30"></td></tr>
+                  <tr><td> Attribute 5:Pelvic_radius</td><td><input type="text" name="col5"size="30"></td></tr>
+                  <tr><td> Attribute 6:Degree_spondylolisthesis</td><td><input type="text" name="col6"size="30"></td></tr>
+                  <tr><td> Attribute 7:Pelvic_slope</td><td><input type="text" name="col7"size="30"></td></tr>
+                  <tr><td> Attribute 8:Direct_tilt</td><td><input type="text" name="col8"size="30"></td></tr>
+                  <tr><td> Attribute 9:Thoracic_slope</td><td><input type="text" name="col9"size="30"></td></tr>
+                  <tr><td> Attribute 10:Cervical_tilt</td><td><input type="text" name="col10"size="30"></td></tr>
+                  <tr><td> Attribute 11:Sacrum_angle</td><td><input type="text" name="col11"size="30"></td></tr>
+                  <tr><td> Attribute 12:Scoliosis_slope</td><td><input type="text" name="col12"size="30"></td></tr>
+                  <tr><td><input type="submit" value="submit"></td>           <td><input type="reset" value="Reset"></td></tr>
+      </table> 
+	  {% if pred is defined %} 
+		<p style="text-align:center; color:yellow">Output: {{pred}} </p>
+	  {% endif %}
+  </form>
+</body>
+</html>
