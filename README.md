@@ -28,6 +28,11 @@ So, a virtual environment with name project will be created
 So, virtual environment will be activated
 You, have to install those packages
 
-<b>Step - 3: Launch the app through the following command </b>
+<b>Step - 3: Clone the Project </b>
+
+<code>git clone https://github.com/madblocksgit/ABNORMALITY-FEATURE-EXTRACTION-IN-SPINAL-CORD-MRI.git </code>
+
+<b>Step - 4: Launch the app through the following command </b>
+<br/>Go to the cloned folder and run this<br/>
 
 <code>python app.py</code>
